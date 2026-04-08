@@ -22,4 +22,8 @@ function(liquid-dsp_Populate remote_url local_path OS ARCH BUILD_TYPE)
     set_property(GLOBAL PROPERTY liquid-dsp_LIBRARIES ${install_dir}/lib/libliquid.a)
     set_property(GLOBAL PROPERTY liquid-dsp_INSTALL_LIBRARIES ${install_dir}/lib/libliquid.a)
 
+    add_library(Liquid::liquid INTERFACE IMPORTED GLOBAL)
+    target_include_directories(Liquid::liquid INTERFACE ${install_dir}/include)
+    target_link_libraries(Liquid::liquid INTERFACE ${install_dir}/lib/libliquid.a)
+
 endfunction()
