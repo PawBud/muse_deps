@@ -1,4 +1,4 @@
-function(libliquid-dsp_Populate remote_url local_path OS ARCH BUILD_TYPE)
+function(liquid_Populate remote_url local_path OS ARCH BUILD_TYPE)
     set(src_dir ${local_path}/src)
     set(build_dir ${local_path}/build)
     set(install_dir ${local_path}/install)
